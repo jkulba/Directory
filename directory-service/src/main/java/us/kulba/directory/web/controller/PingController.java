@@ -18,7 +18,7 @@ public class PingController {
         logger.debug("Hit PingController.ping()");
 
         Ping p = new Ping();
-        p.setApplication("Crayon Service");
+        p.setApplication("Directory Service");
         p.setVersion("1.0");
 
         return p;
