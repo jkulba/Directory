@@ -7,12 +7,11 @@ import org.springframework.data.mongodb.MongoDbFactory;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
-
 import us.kulba.directory.dao.ContactRepository;
 
 @Configuration
-@EnableMongoRepositories(basePackageClasses = ContactRepository.class)
-public class TestConfig {
+@EnableMongoRepositories(basePackageClasses = { ContactRepository.class })
+public class MongoRepositoryConfiguration {
 
     public
     @Bean
@@ -26,5 +25,4 @@ public class TestConfig {
     MongoTemplate mongoTemplate() throws Exception {
         return new MongoTemplate(mongoDbFactory());
     }
-
 }
