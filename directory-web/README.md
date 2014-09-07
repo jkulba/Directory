@@ -27,5 +27,14 @@ yo angular [app-name]
 ### Installation Gotchas
 I had to install a couple of items due to errors the first time I ran a clean and test.
 
+Install the chalk library:
+```
+npm install chalk --save-dev
+```
+Install the grunt-karma library:
+```
+npm install grunt-karma --save-dev
+```
+
 
 
