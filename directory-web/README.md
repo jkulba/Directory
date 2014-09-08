@@ -36,5 +36,10 @@ Install the grunt-karma library:
 npm install grunt-karma --save-dev
 ```
 
+Install the karma phantomjs library:
+```
+npm install karma-phantomjs-launcher --save-dev
+```
+
 
 
