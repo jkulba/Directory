@@ -42,7 +42,30 @@ app.config(function($stateProvider, $urlRouterProvider) {
             '': { templateUrl: 'views/partial-about.html' },
 
             // the child views will be defined here (absolutely named)
-            'columnOne@about': { template: 'Look I am a column!' },
+            'columnOne@about': { 
+              templateUrl: 'views/partial-search-filter.html'
+            },
+
+            // for column two, we'll define a separate controller 
+            'columnTwo@about': { 
+                templateUrl: 'views/table-data.html',
+                controller: 'scotchController'
+            }
+        }
+        
+    })
+       // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
+       .state('search', {
+        url: '/search',
+        views: {
+
+            // the main template will be placed here (relatively named)
+            '': { templateUrl: 'views/partial-search.html' },
+
+            // the child views will be defined here (absolutely named)
+            'columnOne@about': { 
+              templateUrl: 'views/partial-search-filter.html'
+            },
 
             // for column two, we'll define a separate controller 
             'columnTwo@about': { 
@@ -52,5 +75,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
         }
         
     });
+
 
 });
